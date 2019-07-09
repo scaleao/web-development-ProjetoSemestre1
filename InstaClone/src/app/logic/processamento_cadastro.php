@@ -1,6 +1,6 @@
 <?php
-require_once "./app/conexao.php";
-require_once "./app/functionUtil.php";
+require_once "../database/conexao.php";
+require_once "../functionUtil.php";
 
 /*******
  *        $_GET Pega todas as informacoes do tipo GET, mas o Metodo GET não é recomendado para enviar dados sensiveis porque
@@ -47,7 +47,7 @@ require_once "./app/functionUtil.php";
       toSession("nome", $nome);
       toSession("usuario", $usuario);
 
-      header("Location: ./index.php"); //função header direciona para alguma pagina desde que não tenha usado a funcao echo de escrever
+      header("Location: ../../index.php"); //função header direciona para alguma pagina desde que não tenha usado a funcao echo de escrever
       exit();
     }
 
