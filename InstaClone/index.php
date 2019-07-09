@@ -16,7 +16,7 @@
       <span id="clone">Clone</span>
     </div>
     <div class="object-panel-title align-right">
-      <forms method="POST" action="login.php">
+      <form method="POST" action="./app/logic/processamento_login.php">
         <div class="object-panel-title">
           Login: <input type="text" class="text-login" name="login">
         </div>
@@ -27,7 +27,7 @@
         <div class="object-panel-title">
           <input type="submit" class="buttom-login" value="Entrar">
         </div>
-      </forms>
+      </form>
     </div>
   </div>
   <div class="panel">
@@ -38,7 +38,7 @@
       <p><b>Cadastre-­se para ver fotos e vídeos dos seus amigos.</b></p>
     </header>
     <div class="formulario">
-      <form method="POST" action="cadastro.php">
+      <form method="POST" action="./app/logic/processamento_cadastro.php">
         <div>
           <input type="email" value="<?=fromSession("email"); ?>" class="text text-focus" name="email-cadastro" placeholder="Numero do celular ou e-mail" id="js_email">
         </div>

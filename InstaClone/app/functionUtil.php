@@ -11,6 +11,12 @@ function getPost($param){
   }
 }
 
+function getSession($param){
+  if(isset($_SESSION[$param])){
+    return $_SESSION[$param];
+  }
+}
+
 function toSession($key, $value){
   session_start();
   $_SESSION[$key] = $value;
