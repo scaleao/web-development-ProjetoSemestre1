@@ -5,8 +5,7 @@
 }
 
 body, html {
-
-  /* background-image: url("./img/background.jpg"); */
+  background: url('../img/background.jpg');
   background-color: #FAFAFA;
   font-family: 'Roboto', 'Indie Flower', 'Sofia', sans-serif;
   font-size: 14pt;
@@ -14,64 +13,16 @@ body, html {
 
 }
 
-/* Celular */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  /* Computador */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+.background-photo {
+  background: url('../img/background.jpg');
+  background-color: #F2F2F2;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-clip: content-box;
 }
 
 .main{
   position: relative;
-}
-
-.background-timeline{
-  background-color: #F2F2F2F2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Roboto', 'Indie Flower', 'Sofia', sans-serif;
-  text-align: center;
-  position: relative;
-}
-
-.painel-timeline{
-  width: 25%;
-  background-color: #FFFFFF;
-  text-align: left;
-  border-bottom: solid thin #D1D1D1;
-  margin-top: 68px;
-  margin-bottom: 15px;
-}
-
-.item-timeline-foto{
-  width: 100%;
-  background-color: #FFFFFF;
-  text-align: left;
-  border-bottom: solid thin #D1D1D1;
-  margin-top: 68px;
-  margin-bottom: 15px;
-
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.feed-painel-timeline{
-  overflow: scroll;
-
 }
 
 .area-inline-block{
@@ -95,20 +46,28 @@ body, html {
   height: 500px;
 }
 
-.background-photo{
-  background: url("./img/background.jpg");
-  background-color: #F2F2F2F2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-clip: content-box; */
-}
-
 .error ul{
-  color: brown;
+  color: #AF0505;
   font-size: 12px;
   text-align: left;
-  border: red solid thin;
+  background-color: #EF6767;
+  border-radius: 6px;
   margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 18px;
+}
+
+.sucess ul{
+  color: #009E07;
+  font-size: 12px;
+  text-align: left;
+  background-color: #93ff93;
+  border-radius: 6px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 18px;
 }
 
 .panel-title{
@@ -130,23 +89,6 @@ body, html {
   font-size: 12pt;
   border: solid #E9ECF3;
   border-radius: 10px;
-
-  opacity: 0.80;
-}
-
-.header-title{
-  position: fixed;
-  display: block;
-
-  padding-top: 20px;
-  padding-left: 60px;
-  padding-right: 45px;
-
-  border-bottom: solid thin #D1D1D1;
-
-  width: 100%;
-  height: 65px;
-  background-color: #FFFFFF;
 }
 
 .object-panel-title{
@@ -183,8 +125,6 @@ body, html {
   text-align: center;
   border: solid #E9ECF3;
   border-radius: 10px;
-
-  opacity: 0.80;
 }
 
 .titulo{
@@ -200,18 +140,6 @@ body, html {
 #clone{
   font-family: 'Sofia';
   font-size: 28pt;
-  color: #2A4B7C;
-}
-
-#instaTL{
-  font-family: 'Sofia';
-  font-size: 18pt;
-  color: black;
-}
-
-#cloneTL{
-  font-family: 'Sofia';
-  font-size: 18pt;
   color: #2A4B7C;
 }
 
@@ -302,16 +230,6 @@ p{
   background-color: #00F;
 }
 
-.buttom-TL{
-  display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 5px;
-}
-
-.buttom-timeline{
-  margin-left: 10px;
-  cursor: pointer;
-}
 .buttom-timeline:hover{
   background-color: white;
 }
@@ -401,4 +319,63 @@ a:hover{
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Celular */
+@media screen and (max-width:768px) {
+  .panel-title{
+    font-size: 12pt;
+    text-align: center;
+    padding: 2px 2px 2px 2px ;
+  }
+
+  .object-panel-title{
+    font-size: 12pt;
+  }
+  #block{
+    display: block;
+    width: 100%;
+  }
+
+  #insta{
+    font-family: 'Sofia';
+    font-size: 12pt;
+    color: black;
+  }
+
+  #clone{
+    font-family: 'Sofia';
+    font-size: 12pt;
+    color: #2A4B7C;
+  }
+
+  .align-right{
+    float: none;
+    text-align: center;
+  }
+
+  .text-login{
+    padding: 3px 10px;
+    margin: 0px 0px 0px 0px ;
+  }
+
+  .password-login{
+    padding: 3px 10px;
+    margin: 0px 0px 0px 0px ;
+  }
+
+  .panel{
+    font-size: 12pt;
+    width: 100%;
+    margin: 65px 0px 0px 0px ;
+  }
+
+  .text {
+    font-size: 12px;
+    width: 100%;
+    padding: 8px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
 }

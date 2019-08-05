@@ -25,7 +25,7 @@ if(strlen($messages) > 0){
 }
 
 try{
-  $sql = "SELECT id, nome, email, usuario FROM usuarios WHERE email = '$login' and senha = '$senha'";
+  $sql = "SELECT id, nome, email, usuario, fotoperfil FROM usuarios WHERE email = '$login' and senha = '$senha'";
   $stmt = getConnection()->prepare($sql);
   $stmt->execute();
   $row = $stmt->fetch();
@@ -35,13 +35,13 @@ try{
     exit();
   }
   else{
-    toSession("messages", "Usuario/Senha incorretos");
+    toSession("messages", "<ul><li>Usuario/Senha incorretos</li></ul>");
     header("Location: ../../index.php");
     exit();
   }
 }
 catch(PDOException $e){
-  toSession("messages", "Ocorreu um erro ao realizar seu login:".$e->getMessage());
+  toSession("messages", "<ul><li>Ocorreu um erro ao realizar seu login:".$e->getMessage()."</li></ul>");
   header("Location: ../../index.php");
 }
 ?>

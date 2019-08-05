@@ -12,6 +12,30 @@ a{
   margin-left: 8px;
 }
 
+.error ul{
+  color: #AF0505;
+  font-size: 12px;
+  text-align: left;
+  background-color: #EF6767;
+  border-radius: 6px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 18px;
+}
+
+.sucess ul{
+  color: #009E07;
+  font-size: 12px;
+  text-align: left;
+  background-color: #93ff93;
+  border-radius: 6px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 18px;
+}
+
 .buttom-perfil{
   background-color: white;
   color: #333;
@@ -37,7 +61,7 @@ a{
 
 .column-header{
   display: inline-block;
-  width: 33%;
+  width: auto;
   padding: 10px;
 }
 
@@ -90,7 +114,7 @@ a{
 
 .perfil-fixed{
   position: fixed;
-  width: 25%;
+  width: 30%;
   display: block;
   margin-left: 40px;
 
@@ -144,6 +168,25 @@ a{
   border-radius: 100%;
 }
 
+.block_comentario{
+  text-align: auto;
+  margin-bottom: 25px;
+}
+
+.user_comentario{
+  font-size: 13pt;
+}
+
+.comentario{
+  font-size: 9pt;
+}
+
+.fotinha-timeline{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
 .painel-perfil{
   min-width: 20%;
   padding-right: 30px;
@@ -162,9 +205,9 @@ a{
   height: 250px;
 }
 
-.foto-gallery:hover{
+/*.foto-gallery:hover{
   opacity: 0.5;
-}
+}*/
 
 .align-right{
   float: right;
@@ -183,6 +226,10 @@ a{
   text-align: center;
 }
 
+.none{
+  display: none;
+}
+
 .column-feed{
   float: left;
   width: 100%;
@@ -193,7 +240,37 @@ a{
   padding: 5px;
 }
 
+.column-perfilALT{
+
+}
+
+.painel-perfilALT{
+  width: 60%;
+  border: solid thin #D1D1D1;
+  background-color: white;
+  margin: 0px;
+  text-align: center;
+}
+
+/* Estilo area perfil*/
+
+.background-perfilALT{
+  width: 100%;
+  margin: 0px;
+  justify-content: center;
+  display: flex;
+}
+
 /* Estilos de inputs */
+.text-editar{
+  width: 80%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px thin #D1D1D1;
+  transition: 0.5s;
+  outline: none;
+  margin-bottom: 10px;
+}
 
 .text-feed{
   width: 85%;
@@ -232,6 +309,40 @@ a{
   border: 2px solid #4B80F7;
 }
 
+.buttom{
+  width: auto;
+  color: white;
+  background-color: #0CC0FF;
+  border: #0CC0FF;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.buttom:hover{
+  color: white;
+  background-color: #0990FF;
+  border: #0990FF;
+  cursor: pointer;
+}
+
+.buttom-search{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.formulario{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+}
+.column-15{
+  width: 20%;
+  text-align: right;
+}
+
+.column-80{
+  width: 79%;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -241,14 +352,118 @@ a{
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
+@media screen and (max-width:1050px) {
+  .column-header{
+    display: inline-block;
+    width: auto;
+    margin: 0px
+  }
+
+  #instaTL{
+    display: none;
+  }
+
+  #cloneTL{
+    display: none;
+  }
+
+  .text-search{
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #D1D1D1;
+    border-radius: 2px;
+    background-color: #FAFAFA;
+    padding: 3px 8px 3px 12px;
+  }
+
+  .none{
+    display: none;
+  }
+
+  .painel-body-feed{
+    width: 100%;
+    margin: 0px 0px 30px 0px ;
+  }
+
+  .painel-foto-feed{
+    width: 100%;
+    height: 350px;
+  }
+
+  .painel-perfilALT{
+    width: 95%;
+    border: solid thin #D1D1D1;
+    background-color: white;
+    margin: 0px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:530px){
+  .column-header{
+    display: inline-block;
+    width: auto;
+    margin: 0px 2px;
+    padding: 20px 0px 0px 0px;
+  }
+
+  #instaTL{
+    display: none;
+  }
+
+  #cloneTL{
+    display: none;
+  }
+
+  .text-search{
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #D1D1D1;
+    border-radius: 2px;
+    background-color: #FAFAFA;
+    padding: 3px 8px 3px 12px;
+    display: none;
+  }
+
+  .none-item{
+    display: none;
+  }
+
+  .none{
+    display: inline-block;
+  }
+
   .column {
     width: 100%;
   }
-  .column-gallery{
+
+  .painel-body-feed{
     width: 100%;
+    margin: 0px 0px 30px 0px ;
   }
-  div{
+
+  .painel-foto-feed{
     width: 100%;
+    height: 350px;
+  }
+
+  .painel-perfilALT{
+    width: 95%;
+    border: solid thin #D1D1D1;
+    background-color: white;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .perfil-fixed{
+    display: none;
+  }
+
+  .area-fixed-historia{
+    display: none;
+  }
+
+  .area-fixed{
+    display: none;
   }
 }

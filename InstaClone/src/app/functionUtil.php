@@ -11,6 +11,12 @@ function getPost($param){
   }
 }
 
+function getFiles($param){
+  if(isset($_FILES[$param])){
+    return $_FILES[$param];
+  }
+}
+
 function getSession($param){
   if(isset($_SESSION[$param])){
     return $_SESSION[$param];
@@ -23,6 +29,7 @@ function toSession($key, $value){
 }
 
 function getUser(){
+  session_start();
   if(!isset($_SESSION) || !isset($_SESSION["autenticado"])){
     return null;
   }
