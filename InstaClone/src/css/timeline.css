@@ -168,19 +168,6 @@ a{
   border-radius: 100%;
 }
 
-.block_comentario{
-  text-align: auto;
-  margin-bottom: 25px;
-}
-
-.user_comentario{
-  font-size: 13pt;
-}
-
-.comentario{
-  font-size: 9pt;
-}
-
 .fotinha-timeline{
   width: 40px;
   height: 40px;
@@ -342,6 +329,11 @@ a{
 
 .column-80{
   width: 79%;
+}
+
+.block_comentario{
+  text-align: auto;
+  margin-bottom: 25px;
 }
 
 /* Clear floats after the columns */

@@ -123,8 +123,6 @@ try {
 
 
   $legenda = getPost("legenda");
-  $curtidas = 0;
-  $comentarios = 0;
 
   date_default_timezone_set('America/Sao_Paulo');
   $data = date('Y-m-d H:i:s');
@@ -135,13 +133,11 @@ try {
     toSession("messages-sucesso_perfilALT", $messages_sucess);
 
 
-    $sql = "INSERT INTO foto(idUsuario, diretorioFoto, legenda, curtidas, comentarios, data) VALUES (:idUsuario, :nomeAtual, :legenda, :curtidas, :comentarios :data)" ; // ----------> Cria uma Query SQL e associa a coluna do banco com as variaveis dos dados
+    $sql = "INSERT INTO foto(idUsuario, diretorioFoto, legenda, data) VALUES (:idUsuario, :nomeAtual, :legenda, :data)" ; // ----------> Cria uma Query SQL e associa a coluna do banco com as variaveis dos dados
     $stmt = getConnection()->prepare($sql); // ---------------------------------> Faz o PreparedStatement com a conexao passando a Query SQL
     $stmt->bindParam(':idUsuario', $idUsuario); // ---------------------------> Preenche os campos das colunas para enviar para o banco
     $stmt->bindParam(':nomeAtual', $nomeAtual); // ---> Direorio da foto
     $stmt->bindParam(':legenda', $legenda);
-    $stmt->bindParam(':curtidas', $curtidas);
-    $stmt->bindParam('comentarios', $comentarios);
     $stmt->bindParam(':data', $data);
     if($stmt->execute()){
       toSession("messages-sucesso_perfilALT", $messages_sucess);
